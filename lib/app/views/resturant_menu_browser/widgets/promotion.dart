@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../data/constants/colors.dart';
 
-class ResturantBrowserPromotion extends StatelessWidget {
-  const ResturantBrowserPromotion({
+class ResturantMenuBrowserPromotion extends StatelessWidget {
+  const ResturantMenuBrowserPromotion({
     Key? key,
   }) : super(key: key);
 

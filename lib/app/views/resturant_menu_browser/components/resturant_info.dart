@@ -6,18 +6,18 @@ import '../../../../data/constants/colors.dart';
 import '../widgets/promotion.dart';
 import 'recent_orders.dart';
 
-class ResturantBrowserResturantInformation extends StatefulWidget {
-  const ResturantBrowserResturantInformation({
+class ResturantMenuBrowserResturantInformation extends StatefulWidget {
+  const ResturantMenuBrowserResturantInformation({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<ResturantBrowserResturantInformation> createState() =>
-      _ResturantBrowserResturantInformationState();
+  State<ResturantMenuBrowserResturantInformation> createState() =>
+      _ResturantMenuBrowserResturantInformationState();
 }
 
-class _ResturantBrowserResturantInformationState
-    extends State<ResturantBrowserResturantInformation> {
+class _ResturantMenuBrowserResturantInformationState
+    extends State<ResturantMenuBrowserResturantInformation> {
   @override
   void initState() {
     // TODO: implement initState
@@ -173,11 +173,11 @@ class _ResturantBrowserResturantInformationState
           const SizedBox(
             height: 10,
           ),
-          ResturantBrowserPromotion(),
+          ResturantMenuBrowserPromotion(),
           const SizedBox(
             height: 10,
           ),
-          ResturantBrowserRecentOrders(),
+          ResturantMenuBrowserRecentOrders(),
           const SizedBox(
             height: 15,
           ),

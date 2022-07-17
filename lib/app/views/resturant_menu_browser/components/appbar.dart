@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 
 import '../../../../data/constants/colors.dart';
 
-class ResturantBrowserAppbar extends StatelessWidget {
-  const ResturantBrowserAppbar({
+class ResturantMenuBrowserAppbar extends StatelessWidget {
+  const ResturantMenuBrowserAppbar({
     Key? key,
   }) : super(key: key);
 

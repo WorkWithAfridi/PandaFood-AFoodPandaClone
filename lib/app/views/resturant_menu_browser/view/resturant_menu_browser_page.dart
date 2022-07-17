@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:pandafood/app/views/resturant_browser/controller/controller.dart';
-
-import '../../../../data/demo_data/demo_data.dart';
 import '../components/appbar.dart';
 import '../components/category_and_menu_items.dart';
+import '../controller/controller.dart';
 import '../widgets/menu_category_list.dart';
 import '../components/resturant_info.dart';
 
-class ResturantBrowserPage extends StatefulWidget {
-  const ResturantBrowserPage({Key? key}) : super(key: key);
+class ResturantMenuBrowserPage extends StatefulWidget {
+  const ResturantMenuBrowserPage({Key? key}) : super(key: key);
 
   @override
-  State<ResturantBrowserPage> createState() => _ResturantBrowserPageState();
+  State<ResturantMenuBrowserPage> createState() => _ResturantMenuBrowserPageState();
 }
 
-class _ResturantBrowserPageState extends State<ResturantBrowserPage> {
-  final ResturantBrowserController controller = Get.find();
+class _ResturantMenuBrowserPageState extends State<ResturantMenuBrowserPage> {
+  final ResturantMenuBrowserController controller = Get.find();
   
   @override
   void initState() {
@@ -43,10 +39,10 @@ class _ResturantBrowserPageState extends State<ResturantBrowserPage> {
       body: CustomScrollView(
         controller: controller.resturantBrowserPageScrollController.value,
         slivers: [
-          ResturantBrowserAppbar(),
-          ResturantBrowserResturantInformation(),
+          ResturantMenuBrowserAppbar(),
+          ResturantMenuBrowserResturantInformation(),
           SliverPersistentHeader(
-            delegate: ResturantBrowserMenuCategories(
+            delegate: ResturantMenuBrowserMenuCategories(
               // onChanged: controller
               //     .updateResturantBrowserPageScrollPositionOnMenuCategoryChange,
             ),
@@ -55,7 +51,7 @@ class _ResturantBrowserPageState extends State<ResturantBrowserPage> {
           const SliverToBoxAdapter(
             child: SizedBox(height: 10),
           ),
-          ResturantBrowserCategoryAndMenuItems()
+          ResturantMenuBrowserCategoryAndMenuItems()
         ],
       ),
     );

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pandafood/app/views/resturant_browser/controller/controller.dart';
 
 import '../../../../data/constants/colors.dart';
 import '../../../../data/demo_data/demo_data.dart';
+import '../controller/controller.dart';
 
-class ResturantBrowserMenuCategories extends SliverPersistentHeaderDelegate {
+class ResturantMenuBrowserMenuCategories extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       height: 36,
       color: Colors.white,
-      child: ResturantBrowserMenuCategoryList(),
+      child: ResturantMenuBrowserMenuCategoryList(),
     );
   }
 
@@ -28,9 +28,9 @@ class ResturantBrowserMenuCategories extends SliverPersistentHeaderDelegate {
   }
 }
 
-class ResturantBrowserMenuCategoryList extends StatelessWidget {
-  ResturantBrowserMenuCategoryList({Key? key}) : super(key: key);
-  final ResturantBrowserController controller = Get.find();
+class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
+  ResturantMenuBrowserMenuCategoryList({Key? key}) : super(key: key);
+  final ResturantMenuBrowserController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

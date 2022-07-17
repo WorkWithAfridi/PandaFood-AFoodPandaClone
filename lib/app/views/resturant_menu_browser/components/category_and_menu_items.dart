@@ -6,8 +6,8 @@ import '../../../../data/demo_data/demo_data.dart';
 import '../../../../data/model/resturant_menu_item.dart';
 import '../widgets/menu_item_card.dart';
 
-class ResturantBrowserCategoryAndMenuItems extends StatelessWidget {
-  const ResturantBrowserCategoryAndMenuItems({
+class ResturantMenuBrowserCategoryAndMenuItems extends StatelessWidget {
+  const ResturantMenuBrowserCategoryAndMenuItems({
     Key? key,
   }) : super(key: key);
 

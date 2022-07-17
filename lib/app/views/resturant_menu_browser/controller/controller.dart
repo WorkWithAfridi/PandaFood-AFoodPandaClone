@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../../data/demo_data/demo_data.dart';
 
-class ResturantBrowserController extends GetxController {
+class ResturantMenuBrowserController extends GetxController {
   var selectedMenuCategory = 0.obs;
   var resturantBrowserPageScrollController = ScrollController().obs;
   var resturantBrowserMenuCategoryScrollController = ScrollController().obs;

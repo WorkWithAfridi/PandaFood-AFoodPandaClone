@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:pandafood/app/views/resturant_browser/widgets/recent_order_card.dart';
 
-import '../../../../data/constants/colors.dart';
+import '../widgets/recent_order_card.dart';
 
-class ResturantBrowserRecentOrders extends StatelessWidget {
-  const ResturantBrowserRecentOrders({
+class ResturantMenuBrowserRecentOrders extends StatelessWidget {
+  const ResturantMenuBrowserRecentOrders({
     Key? key,
   }) : super(key: key);
 
