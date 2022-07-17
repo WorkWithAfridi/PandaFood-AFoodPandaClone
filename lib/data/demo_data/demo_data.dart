@@ -1,7 +1,7 @@
 import '../model/resturant_menu_category.dart';
 import '../model/resturant_menu_item.dart';
 
-final List<ResturantMenuCategory> demoResturantMenuCategoryList = [
+final List<ResturantMenuCategory> demoRestaurantMenuCategoryList = [
   ResturantMenuCategory(
     categoryName: "Popular",
     items: [

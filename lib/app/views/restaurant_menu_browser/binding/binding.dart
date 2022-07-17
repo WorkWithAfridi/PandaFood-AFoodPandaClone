@@ -2,9 +2,9 @@ import 'package:get/get.dart';
 
 import '../controller/controller.dart';
 
-class ResturantMenuBrowserBinding extends Bindings {
+class RestaurantMenuBrowserBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => ResturantMenuBrowserController());
+    Get.lazyPut(() => RestaurantMenuBrowserController());
   }
 }

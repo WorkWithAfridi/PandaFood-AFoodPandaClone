@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/recent_order_card.dart';
 
-class ResturantMenuBrowserRecentOrders extends StatelessWidget {
-  const ResturantMenuBrowserRecentOrders({
+class RecentOrders extends StatelessWidget {
+  const RecentOrders({
     Key? key,
   }) : super(key: key);
 

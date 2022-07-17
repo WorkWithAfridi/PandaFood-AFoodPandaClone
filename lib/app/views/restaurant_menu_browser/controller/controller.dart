@@ -4,28 +4,28 @@ import 'package:get/get.dart';
 
 import '../../../../data/demo_data/demo_data.dart';
 
-class ResturantMenuBrowserController extends GetxController {
+class RestaurantMenuBrowserController extends GetxController {
   var selectedMenuCategory = 0.obs;
-  var resturantBrowserPageScrollController = ScrollController().obs;
-  var resturantBrowserMenuCategoryScrollController = ScrollController().obs;
+  var restaurantBrowserPageScrollController = ScrollController().obs;
+  var restaurantBrowserMenuCategoryScrollController = ScrollController().obs;
   List breakpointsInBetweenCategories = [];
-  double appBarAndResturantInfoHeight = 310 + 250 - kToolbarHeight;
+  double appBarAndRestaurantInfoHeight = 310 + 250 - kToolbarHeight;
 
   createBreakpointsInBetweenMenuItemCategories() {
-    double firstBreakpoint = appBarAndResturantInfoHeight +
+    double firstBreakpoint = appBarAndRestaurantInfoHeight +
         45 +
-        (120 * demoResturantMenuCategoryList[0].items.length);
+        (120 * demoRestaurantMenuCategoryList[0].items.length);
     breakpointsInBetweenCategories.add(firstBreakpoint);
-    for (var i = 1; i < demoResturantMenuCategoryList.length; i++) {
+    for (var i = 1; i < demoRestaurantMenuCategoryList.length; i++) {
       double bp = breakpointsInBetweenCategories.last +
           45 +
-          (120 * demoResturantMenuCategoryList[i].items.length);
+          (120 * demoRestaurantMenuCategoryList[i].items.length);
       breakpointsInBetweenCategories.add(bp);
     }
   }
 
-  updateMenuCategoryOnResturantBrowserPageScroll(double offset) {
-    for (var i = 0; i < demoResturantMenuCategoryList.length; i++) {
+  updateMenuCategoryOnRestaurantBrowserPageScroll(double offset) {
+    for (var i = 0; i < demoRestaurantMenuCategoryList.length; i++) {
       if (i == 0) {
         if ((offset < breakpointsInBetweenCategories.first) &
             (selectedMenuCategory.value != 0)) {
@@ -37,7 +37,7 @@ class ResturantMenuBrowserController extends GetxController {
           selectedMenuCategory.value = i;
         }
       }
-      resturantBrowserMenuCategoryScrollController.value.animateTo(
+      restaurantBrowserMenuCategoryScrollController.value.animateTo(
         60.0 * selectedMenuCategory.value,
         curve: Curves.ease,
         duration: const Duration(milliseconds: 200),
@@ -45,17 +45,17 @@ class ResturantMenuBrowserController extends GetxController {
     }
   }
 
-  updateResturantBrowserPageScrollPositionOnMenuCategoryChange(int index) {
+  updateRestaurantBrowserPageScrollPositionOnMenuCategoryChange(int index) {
     if (selectedMenuCategory.value != index) {
       int totalItemsInThatCategory = 0;
       for (var i = 0; i < index; i++) {
         totalItemsInThatCategory +=
-            demoResturantMenuCategoryList[i].items.length;
+            demoRestaurantMenuCategoryList[i].items.length;
       }
       //120 = menuItemCard +v padding
       // 45 = text size + v padding
-      resturantBrowserPageScrollController.value.animateTo(
-        appBarAndResturantInfoHeight +
+      restaurantBrowserPageScrollController.value.animateTo(
+        appBarAndRestaurantInfoHeight +
             (120 * totalItemsInThatCategory) +
             10 +
             (45 * index) +

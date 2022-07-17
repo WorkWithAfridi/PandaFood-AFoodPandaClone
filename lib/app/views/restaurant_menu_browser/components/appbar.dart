@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 
 import '../../../../data/constants/colors.dart';
 
-class ResturantMenuBrowserAppbar extends StatelessWidget {
-  const ResturantMenuBrowserAppbar({
+class RestaurantMenuBrowserAppbar extends StatelessWidget {
+  const RestaurantMenuBrowserAppbar({
     Key? key,
   }) : super(key: key);
 
@@ -108,12 +108,17 @@ class ResturantMenuBrowserAppbar extends StatelessWidget {
       ),
       leading: Padding(
         padding: const EdgeInsets.only(left: 16.0),
-        child: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Icon(
-            FontAwesomeIcons.arrowLeft,
-            color: darkPink,
-            size: 15,
+        child: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: CircleAvatar(
+            backgroundColor: Colors.white,
+            child: Icon(
+              FontAwesomeIcons.arrowLeft,
+              color: darkPink,
+              size: 15,
+            ),
           ),
         ),
       ),

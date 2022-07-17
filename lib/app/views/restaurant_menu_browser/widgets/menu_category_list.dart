@@ -5,14 +5,14 @@ import '../../../../data/constants/colors.dart';
 import '../../../../data/demo_data/demo_data.dart';
 import '../controller/controller.dart';
 
-class ResturantMenuBrowserMenuCategories extends SliverPersistentHeaderDelegate {
+class MenuCategories extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       height: 36,
       color: Colors.white,
-      child: ResturantMenuBrowserMenuCategoryList(),
+      child: MenuCategoryList(),
     );
   }
 
@@ -28,9 +28,9 @@ class ResturantMenuBrowserMenuCategories extends SliverPersistentHeaderDelegate 
   }
 }
 
-class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
-  ResturantMenuBrowserMenuCategoryList({Key? key}) : super(key: key);
-  final ResturantMenuBrowserController controller = Get.find();
+class MenuCategoryList extends StatelessWidget {
+  MenuCategoryList({Key? key}) : super(key: key);
+  final RestaurantMenuBrowserController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
         color: Colors.white,
         child: SingleChildScrollView(
           controller:
-              controller.resturantBrowserMenuCategoryScrollController.value,
+              controller.restaurantBrowserMenuCategoryScrollController.value,
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
@@ -48,11 +48,11 @@ class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
                 width: 6,
               ),
               ...List.generate(
-                demoResturantMenuCategoryList.length,
+                demoRestaurantMenuCategoryList.length,
                 (index) => GestureDetector(
                   onTap: () {
                     controller
-                        .updateResturantBrowserPageScrollPositionOnMenuCategoryChange(
+                        .updateRestaurantBrowserPageScrollPositionOnMenuCategoryChange(
                             index);
                   },
                   child: Obx(
@@ -71,7 +71,7 @@ class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
                                 horizontal: 14,
                               ),
                               child: Text(
-                                demoResturantMenuCategoryList[index]
+                                demoRestaurantMenuCategoryList[index]
                                     .categoryName,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
@@ -103,7 +103,7 @@ class ResturantMenuBrowserMenuCategoryList extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
             ],

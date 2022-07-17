@@ -6,8 +6,8 @@ import '../../../../data/demo_data/demo_data.dart';
 import '../../../../data/model/resturant_menu_item.dart';
 import '../widgets/menu_item_card.dart';
 
-class ResturantMenuBrowserCategoryAndMenuItems extends StatelessWidget {
-  const ResturantMenuBrowserCategoryAndMenuItems({
+class CategoryAndMenuItems extends StatelessWidget {
+  const CategoryAndMenuItems({
     Key? key,
   }) : super(key: key);
 
@@ -15,10 +15,10 @@ class ResturantMenuBrowserCategoryAndMenuItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-        childCount: demoResturantMenuCategoryList.length,
+        childCount: demoRestaurantMenuCategoryList.length,
         (context, index) {
           List<ResturantMenuItem> items =
-              demoResturantMenuCategoryList[index].items;
+              demoRestaurantMenuCategoryList[index].items;
           return Container(
             padding: const EdgeInsets.symmetric(
               vertical: 5,
@@ -58,7 +58,7 @@ class ResturantMenuBrowserCategoryAndMenuItems extends StatelessWidget {
                                 )
                               : const SizedBox.shrink(),
                           Text(
-                            demoResturantMenuCategoryList[index].categoryName,
+                            demoRestaurantMenuCategoryList[index].categoryName,
                             style: TextStyle(
                               fontSize: 25,
                               color: Colors.black.withOpacity(.8),
