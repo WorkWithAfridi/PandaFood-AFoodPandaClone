@@ -30,24 +30,18 @@ class ResturantBrowserController extends GetxController {
         if ((offset < breakpointsInBetweenCategories.first) &
             (selectedMenuCategory.value != 0)) {
           selectedMenuCategory.value = 0;
-
-          resturantBrowserMenuCategoryScrollController.value.animateTo(
-            50.0 * selectedMenuCategory.value,
-            curve: Curves.ease,
-            duration: const Duration(milliseconds: 200),
-          );
         }
       } else if ((breakpointsInBetweenCategories[i - 1] <= offset) &
           (offset < breakpointsInBetweenCategories[i])) {
         if (selectedMenuCategory.value != i) {
           selectedMenuCategory.value = i;
-          resturantBrowserMenuCategoryScrollController.value.animateTo(
-            50.0 * selectedMenuCategory.value,
-            curve: Curves.ease,
-            duration: const Duration(milliseconds: 200),
-          );
         }
       }
+      resturantBrowserMenuCategoryScrollController.value.animateTo(
+        60.0 * selectedMenuCategory.value,
+        curve: Curves.ease,
+        duration: const Duration(milliseconds: 200),
+      );
     }
   }
 

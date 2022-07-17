@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../../data/constants/colors.dart';
 import '../widgets/promotion.dart';
-import '../widgets/recent_orders.dart';
+import 'recent_orders.dart';
 
 class ResturantBrowserResturantInformation extends StatefulWidget {
   const ResturantBrowserResturantInformation({
